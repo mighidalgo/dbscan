@@ -30,8 +30,8 @@ async def dbscan():
             eps: The maximum distance between two samples for one to be considered as in the neighborhood of the other.
             min_samples: The number of samples (or total weight) in a neighborhood for a point to be considered as a core point. 
         """
-        eps = float(os.getenv('EPS', 305400000)) # Si no está definida, usa 305400000 por defecto
-        min_samples = int(os.getenv('MIN_SAMPLES', 4)) # Si no está definida, usa 4 por defecto
+        eps = float(os.getenv('EPS', 305400000)) # if not defined, default value is 305400000
+        min_samples = int(os.getenv('MIN_SAMPLES', 4)) # if not defined, default value is 4
 
         dbscan = DBSCAN(eps=eps, min_samples=min_samples)
 
